@@ -2,12 +2,12 @@
 
 > JS | Data structures
 >
-> JS | Array advanced methods: `.map(), .filter(), .reduce(), .reverse()` and `.sort()`
+> JS | Array advanced methods: `.map()`, `.filter()`, `.reduce()`, `.reverse()` and `.sort()`
 
 
 ## Main points: array advanced methods
 
-Los métodos `.map()`, .filter()` y `.reduce()` retornan un nuevo array con el resultado de las operaciones realizadas.
+Los métodos `.map()`, `.filter()` y `.reduce()` retornan un nuevo array con el resultado de las operaciones realizadas.
 
 - El método `.map()`:
   - Recibe como argumento una función.
