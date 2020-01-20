@@ -20,7 +20,6 @@ Los métodos `.map()`, `.filter()` y `.reduce()` retornan un nuevo array con el 
   - Transfiere al array resultante cada posición del array original donde la función argumentada retorna un valor _truthy_.
   
 - El método `.reduce()` 
-  - Recibe como argumento una función.
   - Recibe como argumento una función con dos parámetros por defecto: acumulador y valor iterado.
   - Puede recibir un segundo argumento tomando este como valor inicial para el acumulador.
   - Toma como valor del acumulador para la segunda y sucesivas iteraciones el valor retornado de la anterior iteración.
