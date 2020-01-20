@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS</title>
+</head>
+
+<body>
+
+    <script>
+
+        // .sort() SÍ MUTA el array original
+        const numbers = [5, 8, 3, 11, 12, 90]
+
+
+        // numbers.sort((a, b) => {
+        //     console.log('----- nueva iteración ------')
+        //     console.log('Primer valor:', a, 'Segundo valor:', b)
+        //     const result = a - b
+        //     if (result > 0) console.log('El resultado de restar', a, '-', b, 'es positivo (', result, '): INTERCAMBIA ORDEN DE VALORES')
+        //     if (result < 0) console.log('El resultado de restar', a, '-', b, 'es negativo (', result, '): INTERCAMBIA ORDEN DE VALORES')
+        //     if (result === 0) console.log('El resultado de restar', a, '-', b, 'es equivalente (', result, '): MANTIENE ORDEN DE VALORES')
+        //     return result
+        // })
+
+
+
+        numbers.sort((a, b) => a - b)
+        console.log(numbers)
+
+
+        const numbers2 = [5, 8, 3, 11, 12, 90]
+        numbers2.sort((a, b) => b - a)
+        console.log(numbers2)
+
+
+
+    </script>
+</body>
+
+</html>

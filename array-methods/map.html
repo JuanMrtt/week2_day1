@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS</title>
+</head>
+
+<body>
+    <script>
+
+        // .map(), .reduce() y .filter() no mutan el array original
+        // .map() retorna un nuevo array de la misma longitud que el original resultante de la computación realizada sobre el mismo
+
+
+
+        // Ejemplo 1
+        // const ages = [1, 2, 3, 2, 1]
+        // const newArray = ages.map(elm => elm * 2)
+        // console.log(newArray)
+
+
+
+
+
+
+        // Ejemplo 2
+        // const drinks = ['beer', 'coffe', 'water', 'orange juice', 'pinneaple juice', 'jagger']
+
+        // const upperDrinks = drinks.map(elm => elm.toUpperCase())
+        // console.log(`Las bebidas en mayúscula: ${upperDrinks}`)
+
+        // const capitalizeDrinks = drinks.map(elm => {
+        //     const firstLetter = elm.charAt(0).toUpperCase()
+        //     const rest = elm.substring(1)
+        //     return firstLetter + rest
+        // })
+        // console.log(`Las bebidas en mayúscula primera: ${capitalizeDrinks}`)
+
+
+
+
+
+
+
+        // Ejemplo 3
+        const students = [
+            {
+                name: "Tony Parker",
+                firstProject: 80,
+                secondProject: 75,
+                finalExam: 90
+            },
+            {
+                name: "Marc Barchini",
+                firstProject: 84,
+                secondProject: 65,
+                finalExam: 65
+            },
+            {
+                name: "Claudia Lopez",
+                firstProject: 45,
+                secondProject: 95,
+                finalExam: 99
+            }
+        ]
+
+
+        const finalGrades = students.map(elm => {
+            const projectsAvg = (elm.firstProject + elm.secondProject) / 2
+            const finalGrade = elm.finalExam * 0.6 + projectsAvg * 0.4
+            // return { name: elm.name, grade: finalGrade }
+
+            // Si necesitásemos una copia previa del objeto, hacemos uso del spread operator
+            return { ...elm, grade: finalGrade }
+        })
+
+        console.log(finalGrades)
+
+
+    </script>
+</body>
+
+</html>

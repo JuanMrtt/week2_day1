@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS</title>
+</head>
+
+<body>
+    <script>
+
+        // .map(), .reduce() y .filter() no mutan el array original
+        // .filter() retorna un nuevo array de la misma longitud o inferior que el original conteniendo las posiciones del original que cumplen una condición
+
+
+
+        //let values = [1, 4, 2, 5, 6, 43, 45, 6, 3, 5, 56, 3, 5, 6, 34, 5, 59, 58, 7, 3, 5]
+
+        // const result = []
+        // values.forEach(elm => {
+        //     if (elm % 2 === 0) {
+        //         result.push(elm)
+        //     }
+        // })
+
+        // Equivalencia .filter()
+        // const result = values.filter(elm => elm % 2 === 0)
+        // console.log(result)
+
+
+
+
+        // const people = [
+        //     { name: "Candice", age: 25 },
+        //     { name: "Tammy", age: 30 },
+        //     { name: "Allen", age: 20 },
+        //     { name: "Nettie", age: 21 },
+        //     { name: "Stuart", age: 17 },
+        //     { name: "Bill", age: 19 }
+        // ]
+
+        // const canDrinkBeer = people.filter(elm => elm.age >= 21)
+
+        // console.log(canDrinkBeer)
+
+
+
+
+
+        // const places = [
+        //     {
+        //         title: "Awesome Suite 20' away from la Rambla",
+        //         price: 200,
+        //         type: "Private Room",
+        //         pool: true,
+        //         garage: false
+        //     },
+        //     {
+        //         title: "Private apartment",
+        //         price: 190,
+        //         type: "Entire Place",
+        //         pool: true,
+        //         garage: true
+        //     },
+        //     {
+        //         title: "Apartment with awesome views",
+        //         price: 400,
+        //         type: "Entire Place",
+        //         pool: false,
+        //         garage: false
+        //     },
+        //     {
+        //         title: "Apartment in la Rambla",
+        //         price: 150,
+        //         type: "Private Room",
+        //         pool: false,
+        //         garage: true
+        //     },
+        //     {
+        //         title: "Comfortable place in Barcelona´s center",
+        //         price: 390,
+        //         type: "Entire place",
+        //         pool: true,
+        //         garage: true
+        //     }
+        // ]
+
+        // const cheapHouses = places.filter(elm => elm.price < 250)
+        // console.log(cheapHouses)
+
+        // const poolHouses = places.filter(elm => elm.pool)
+        // console.log(poolHouses)
+
+        // const fullHouses = places.filter(elm => elm.pool && elm.garage)
+        // console.log(fullHouses)
+
+        // const fullHousesPrice =
+        //     places
+        //         .filter(elm => elm.pool && elm.garage)
+        //         .map(elm => elm.title)
+
+        // console.log(fullHousesPrice)
+
+
+
+
+
+        const numbers = [1, 60, 112, 123, 100, 99, 73, 45];
+
+        // const result = numbers.filter(elm => elm % 2 === false && elm >= 42 === true)
+        const result = numbers.filter(elm => !elm % 2 && elm >= 42)
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Js</title>
+</head>
+
+<body>
+    <script>
+
+        // .map(), .reduce() y .filter() no mutan el array original
+        // .reduce() obtiene un valor final fruto de computar un acumulado en cada iteración sobre el array original
+
+        const numbers = [4, 4, 5, 2, 5, 67]
+
+        // const sum = numbers.reduce((acc, elm) => acc + elm)
+        // console.log(`El total es ${sum}, y la media es ${(sum / numbers.length).toFixed(2)}`)
+
+
+
+
+
+        // // El acumulador inicialmente toma el valor del primer elemento iterado
+        // // El acumulador pasa a tener el valor retornado en sucesivas iteraciones
+        // const explainedReduce = numbers.reduce((acc, elm) => {
+        //     console.log('el valor actual acumulado es ' + acc)
+        //     console.log('el valor actual iterado es ' + elm)
+
+        //     return acc + elm
+        // })
+
+        // console.log(`El total es ${explainedReduce}, y la media es ${(explainedReduce / numbers.length).toFixed(2)}`)
+
+
+
+
+
+        const grades = [7, 6, 7.5, 9, 7, 10, 9, 10, 6]
+        // const gradesSum = grades.reduce((acc, elm) => acc + elm)
+        // console.log(`La nota media es ${gradesSum / grades.length}`)
+
+
+
+
+        // // Un segundo argumento en reduce permite inicializar el cumulador con un valor personalizado
+        // const explainedReduce2 = grades.reduce((acc, elm) => {
+        //     console.log('el valor actual acumulado es ' + acc)
+        //     console.log('el valor actual iterado es ' + elm)
+        //     return acc + elm
+        // }, 100) // segundo argumento
+
+        // // Equivalencia
+        // // const explainedReduce2 = grades.reduce((acc, elm) => acc + elm, 100)
+
+        // console.log(`El total comenzando por 100 es ${explainedReduce2}`)
+
+
+
+
+
+
+        // // .reduce() + objetos
+        // const people = [
+        //     { name: "Candice", age: 25 },
+        //     { name: "Tammy", age: 30 },
+        //     { name: "Allen", age: 49 },
+        //     { name: "Nettie", age: 21 },
+        //     { name: "Stuart", age: 17 }
+        // ]
+
+        // // ERROR: debemos acceder a las edades de los objetos
+        // // const sumAges = people.reduce((acc, elm) => acc + elm)
+
+        // // ERROR: el acumulador no dispone de propiedad .age tras la primera iteración
+        // // const sumAges = people.reduce((acc, elm) => acc.age + elm.age)
+
+        // // ERROR: debemos dar un valor inicial al acumuilador, de lo contrario toma inicialmente todo el objeto en índice 0
+        // // const sumAges = people.reduce((acc, elm) => acc + elm.age)
+
+        // const sumAges = people.reduce((acc, elm) => acc + elm.age, 0)
+
+        // console.log(sumAges)
+
+
+
+
+
+
+        // const menu = [
+        //     { name: "Carrots", calories: 150 },
+        //     { name: "Steak", calories: 350 },
+        //     { name: "Broccoli", calories: 120 },
+        //     { name: "Chicken", calories: 250 },
+        //     { name: "Pizza", calories: 520 }
+        // ]
+
+        // const sumCals = menu.reduce((acc, elm) => acc + elm.calories, 0)
+
+        // console.log(`Las calorías totales son ${sumCals}`)
+
+
+
+
+
+
+
+        // const product = {
+        //     name: "AmazonBasics Apple Certified Lightning to USB Cable",
+        //     price: 7.99,
+        //     manufacter: "Amazon",
+        //     reviews:
+        //         [
+        //             {
+        //                 user: "Pavel Nedved",
+        //                 comments: "It was really usefull, strongly recommended",
+        //                 rate: 4
+        //             },
+        //             {
+        //                 user: "Alvaro Trezeguet",
+        //                 comments: "It lasted 2 days",
+        //                 rate: 1
+        //             },
+        //             {
+        //                 user: "David Recoba",
+        //                 comments: "Awesome",
+        //                 rate: 5
+        //             },
+        //             {
+        //                 user: "Jose Romero",
+        //                 comments: "Good value for money",
+        //                 rate: 4
+        //             },
+        //             {
+        //                 user: "Antonio Cano",
+        //                 comments: "It broked really fast",
+        //                 rate: 2
+        //             }
+        //         ]
+        // }
+
+        // const sumRates = product.reviews.reduce((acc, elm) => acc + elm.rate, 0)
+        // console.log(`El rating medio es ${sumRates / product.reviews.length}`)
+
+
+
+
+
+
+        // const places = [
+        //     {
+        //         title: "Awesome Suite 20' away from la Rambla",
+        //         price: 200,
+        //         type: "Private Room",
+        //         pool: true,
+        //         garage: false
+        //     },
+        //     {
+        //         title: "Private apartment",
+        //         price: 190,
+        //         type: "Entire Place",
+        //         pool: true,
+        //         garage: true
+        //     },
+        //     {
+        //         title: "Apartment with awesome views",
+        //         price: 400,
+        //         type: "Entire Place",
+        //         pool: false,
+        //         garage: false
+        //     },
+        //     {
+        //         title: "Apartment in la Rambla",
+        //         price: 150,
+        //         type: "Private Room",
+        //         pool: false,
+        //         garage: true
+        //     },
+        //     {
+        //         title: "Comfortable place in Barcelona´s center",
+        //         price: 390,
+        //         type: "Entire place",
+        //         pool: true,
+        //         garage: true
+        //     },
+        //     {
+        //         title: "Great house next to Camp Nou",
+        //         price: 140,
+        //         type: "Entire place",
+        //         pool: true,
+        //         garage: true
+        //     },
+        //     {
+        //         title: "Apartment 10' from la Rambla",
+        //         price: 930,
+        //         type: "Entire place",
+        //         pool: true,
+        //         garage: true
+        //     }
+        // ]
+
+
+        // const sumHighPlaces =
+        //     places
+        //         .filter(elm => elm.pool && elm.garage)
+        //         .reduce((acc, elm) => acc + elm.price, 0)
+
+        // console.log(`El precio medio de las casas buenas es ${sumHighPlaces / places.filter(elm => elm.pool && elm.garage).length}`)
+
+
+
+    </script>
+</body>
+
+</html>
