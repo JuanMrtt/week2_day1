@@ -34,7 +34,7 @@ Los métodos `.sort()` y `.reverse()` mutan el array original.
   - Invierte el orden de los elementos presentes en el array.
   
  
-## Main points: `truthys` VS `falsies`
+## Main points: _truthys_ VS _falsies_
 
 Las arquitecturas condicionales accederán siempre al bloque incial de instrucciones excepto en el caso de expresiones con resultado _falsie_:
 - `false`
